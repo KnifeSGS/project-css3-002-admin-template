@@ -1,10 +1,16 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 .header--dark {
     background-color: rgb(51, 57, 64);
     color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
 }
 
 .header__title {
@@ -20,10 +26,11 @@
     border-radius: 4px 0px;
     padding: .375rem .75rem;
     font-size: 1.2rem;
-    border-color: rgba( 0, 0, 0, .15); 
+    transition: border .15s linear;
 }
 .search__input:focus {
-    border-color: rgb(0, 123, 255);
+    border-color: rgb(128, 189, 255);
+    outline: transparent;
 }
 
 .main__nav {
@@ -34,4 +41,33 @@
     background-color: rgb(233, 236, 239);
     border-radius: .25rem;
     padding: 1rem 1.5rem;
+}
+
+.card__top {
+    border-radius: .25rem .25rem 0 0;
+}
+
+
+.card__bottom {
+    border-radius: 0 0 .25rem .25rem;
+}
+
+.main__card--blue {
+    background-color: rgb(0, 123, 255);
+    transition: background-color .3s linear .5s;
+}
+
+.main__card--yellow {
+    background-color: rgb(255, 193, 7);
+    transition: background-color .3s linear .5s;
+}
+
+.main__card--green {
+    background-color: rgb(40, 167, 69);
+    transition: background-color .3s linear .5s;
+}
+
+.main__card--red {
+    background-color: rgb(220, 53, 69);
+    transition: background-color .3s linear .5s;
 }
