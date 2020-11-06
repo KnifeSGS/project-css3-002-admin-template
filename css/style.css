@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 .header--dark {
@@ -16,6 +19,7 @@
 .header__title {
     display: inline;
     font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .header__search {
@@ -35,6 +39,37 @@
 
 .main__nav {
     background-color: rgb(33, 37, 41);
+    color: rgb(120, 120, 120);
+    font-size: .9rem;
+    line-height: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    
+}
+.nav__ul {
+    padding: 0;
+}
+.ul__li {
+    list-style: none;
+}
+.ul__li > a {
+    text-decoration: none;    
+}
+.a--active {
+    color: rgb(190, 190, 190);
+}
+.ul__li > a:visited {
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+}
+
+.ul__li--uppercase {
+    font-size: .7rem;
+    font-weight: 900;
+    color: rgb(80, 80, 80);
+    padding-top: 1rem;
 }
 
 .main__breadcrumb {
@@ -45,11 +80,12 @@
 
 .card__top {
     border-radius: .25rem .25rem 0 0;
+    padding: .5rem;
 }
-
 
 .card__bottom {
     border-radius: 0 0 .25rem .25rem;
+    padding: .5rem;
 }
 
 .main__card--blue {
@@ -70,4 +106,31 @@
 .main__card--red {
     background-color: rgb(220, 53, 69);
     transition: background-color .3s linear .5s;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: 'menu essence essence essence essence essence essence essence';
+}
+.main__aside { 
+    grid-area: menu;
+}
+.content { 
+    grid-area: essence; 
+    padding: 1rem;
+}
+
+.main__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 1rem;
+    max-width: 100%;
+}
+.main__card {
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: .5rem;
+    color: rgb(240, 240, 240)
 }
