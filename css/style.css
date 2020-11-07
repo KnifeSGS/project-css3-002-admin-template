@@ -66,7 +66,15 @@
     flex-direction: column;
     padding: .5rem 1rem;
     min-height: 100vh;
+    max-width: 6rem;
 }
+
+@media only screen and (min-width: 700px) {
+    .main__nav {
+        max-width: 11.5rem;
+    }
+}
+
 
 .main__h1 {
     font-size: 2rem;
@@ -111,6 +119,18 @@
 
 .ul__li a i {
     padding-right: .4rem;
+}
+
+.li__text, .li__text--active {
+    color: transparent;
+}
+@media only screen and (min-width: 700px) {
+    .li__text {
+        color: rgb(120, 120, 120);
+    }
+    .li__text--active {
+        color: rgb(210, 210, 210);
+    }
 }
 
 .main__breadcrumb {
@@ -203,7 +223,6 @@
 .main__aside { 
     /* grid-area: menu; */
     flex-grow: 1;
-
 }
 .content { 
     flex-grow: 16;
