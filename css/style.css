@@ -22,15 +22,32 @@
     font-weight: 400;
 }
 
-.header__search, .header__login {
+.header__search {
     display: inline-flex;
     align-content: center;
     padding-left: 1rem;
 }
 
+.header__login {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.header__login:hover {
+    color: rgb(190, 190, 190);
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
 .header__nav{
     display: inline-flex;
     padding-left: 4rem;
+}
+
+.header__nav:hover {
+    color: rgb(190, 190, 190);
+    transition-duration: .3s;
+    cursor: pointer;
 }
 
 .header__nav, .header__login {
@@ -50,6 +67,7 @@
     background-color: rgb(0, 123, 255);
     color: rgb(233, 236, 239);
     border-color: transparent;
+    min-width: 2.5rem;
 }
 
 .search__input:focus {
@@ -127,6 +145,10 @@
 @media only screen and (min-width: 700px) {
     .li__text {
         color: rgb(120, 120, 120);
+    }
+    .li__text:hover {
+        color: rgb(190, 190, 190);
+        transition-duration: .3s;
     }
     .li__text--active {
         color: rgb(210, 210, 210);
